@@ -174,11 +174,31 @@ footer a:hover{color:var(--blanco)}
   50%{opacity:.5;transform:scale(.8)}
 }
 @media(max-width:520px){
-  .form-inner{flex-direction:column;padding:10px}
-  .form-btn{width:100%;padding:12px}
   .logo{margin-bottom:40px}
   h1{letter-spacing:-.02em}
   .sub{font-size:14px}
+  .form-inner{
+    flex-direction:column;
+    padding:12px;
+    gap:10px;
+    background:transparent;
+    border:none;
+  }
+  .form-inner input{
+    background:rgba(255,255,255,0.12);
+    border:1.5px solid rgba(255,255,255,0.3);
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:16px;
+    color:var(--blanco);
+    width:100%;
+  }
+  .form-btn{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    font-size:15px;
+  }
 }
 </style>
 </head>
