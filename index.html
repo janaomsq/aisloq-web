@@ -8,7 +8,7 @@
 <meta property="og:description" content="La gestión de turnos sanitarios, reinventada. Lanzamos pronto.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./AisloQ — Próximamente_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -26,8 +26,6 @@ body{
   flex-direction:column;
   min-height:100vh;
 }
-
-/* Background decoration */
 .bg-deco{
   position:fixed;top:0;left:0;right:0;bottom:0;
   pointer-events:none;overflow:hidden;z-index:0;
@@ -44,8 +42,6 @@ body{
   width:50vw;height:50vw;
   background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 65%);
 }
-
-/* Main layout */
 .page{
   position:relative;z-index:1;
   display:flex;flex-direction:column;
@@ -54,8 +50,6 @@ body{
   padding:48px 24px;
   text-align:center;
 }
-
-/* Logo */
 .logo{
   display:flex;align-items:center;gap:12px;
   margin-bottom:64px;
@@ -71,8 +65,6 @@ body{
 .logo-icon span{border-radius:3px}
 .logo-name{font-size:24px;font-weight:600;color:var(--blanco)}
 .logo-name em{color:var(--arena);font-style:normal}
-
-/* Badge */
 .badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,255,255,0.1);color:var(--arena);border:1px solid rgba(212,149,106,0.3);
@@ -86,8 +78,6 @@ body{
   background:var(--arena);
   animation:pulse 2s ease infinite;
 }
-
-/* Headline */
 h1{
   font-size:clamp(36px,5vw,64px);
   font-weight:600;
@@ -99,7 +89,6 @@ h1{
   animation:fadeUp .6s ease .15s both;
 }
 h1 em{font-style:normal;color:var(--arena)}
-
 .sub{
   font-size:clamp(16px,2vw,20px);
   color:rgba(255,255,255,0.65);
@@ -108,8 +97,6 @@ h1 em{font-style:normal;color:var(--arena)}
   margin-bottom:48px;
   animation:fadeUp .6s ease .2s both;
 }
-
-/* Form */
 .form-wrap{
   width:100%;max-width:440px;
   animation:fadeUp .6s ease .25s both;
@@ -154,10 +141,6 @@ h1 em{font-style:normal;color:var(--arena)}
   font-size:12px;color:rgba(255,255,255,0.4);
   margin-top:10px;
 }
-
-
-
-/* Footer */
 footer{
   position:relative;z-index:1;
   padding:24px;text-align:center;
@@ -182,8 +165,6 @@ footer{
 footer a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none}
 footer a:hover{color:var(--blanco)}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.25);width:100%;text-align:center;margin-top:8px}
-
-/* Animations */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(20px)}
   to{opacity:1;transform:translateY(0)}
@@ -192,11 +173,9 @@ footer a:hover{color:var(--blanco)}
   0%,100%{opacity:1;transform:scale(1)}
   50%{opacity:.5;transform:scale(.8)}
 }
-
 @media(max-width:520px){
   .form-inner{flex-direction:column;padding:10px}
   .form-btn{width:100%;padding:12px}
-  .teaser{gap:8px}
 }
 </style>
 </head>
@@ -228,7 +207,7 @@ footer a:hover{color:var(--blanco)}
   <div class="form-wrap">
     <form id="notify-form">
       <div class="form-inner">
-        <input type="email" id="notify-email" name="email" placeholder="tu@centro.es" required="" autocomplete="email">
+        <input type="email" id="notify-email" name="email" placeholder="tu@centro.es" required autocomplete="email">
         <button type="submit" class="form-btn">Avisarme →</button>
       </div>
       <div class="form-success" id="notify-success">✓ Apuntado. Serás la primera en saberlo.</div>
@@ -252,10 +231,50 @@ footer a:hover{color:var(--blanco)}
       <span class="footer-logo-name">Aislo<em>Q</em></span>
     </div>
     <a href="mailto:hola@aisloq.com">hola@aisloq.com</a>
-    <a href="https://app.aisloq.com/privacidad">Privacidad</a>
+    <a href="#privacidad" onclick="document.getElementById('modal-privacidad').style.display='flex';return false;">Privacidad</a>
   </div>
   <div class="footer-copy">© 2026 AisloQ. Todos los derechos reservados.</div>
 </footer>
+
+<div id="modal-privacidad" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#2D0F29;border-radius:16px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:40px;position:relative;">
+    <button onclick="document.getElementById('modal-privacidad').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;color:rgba(255,255,255,0.5);font-size:24px;cursor:pointer;">×</button>
+    <h2 style="font-family:'Plus Jakarta Sans',sans-serif;color:#ffffff;font-size:22px;font-weight:600;margin-bottom:24px;">Política de privacidad</h2>
+    <div style="font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,0.75);font-size:14px;line-height:1.8;">
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">1. Responsable del tratamiento</h3>
+      <p>El responsable del tratamiento de los datos personales de los profesionales es el centro o clínica que ha contratado el servicio y al que perteneces. AISLOQ actúa como encargado del tratamiento según el Acuerdo de Encargo de Tratamiento (DPA) firmado con ese responsable.</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">2. Delegado de protección de datos (DPO)</h3>
+      <p>Para cuestiones de privacidad y ejercicio de derechos puedes contactar con nuestro delegado / responsable de privacidad en: <a href="mailto:soporte@aisloq.com" style="color:#D4956A;">soporte@aisloq.com</a>. También puedes dirigirte al responsable del tratamiento de tu centro (RR. HH. / dirección).</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">3. Datos que tratamos y finalidad</h3>
+      <ul style="padding-left:20px;margin:8px 0;">
+        <li><strong>Identificación y contacto:</strong> nombre, apellidos, DNI/NIE (cifrado), email, teléfono — para gestionar tu relación laboral en la plataforma.</li>
+        <li><strong>Datos laborales:</strong> rol, unidad, jornada, contrato, fecha de incorporación — para planificar cuadrantes y cumplir convenio.</li>
+        <li><strong>Organización del trabajo:</strong> turnos, ausencias, vacaciones, cambios de turno, bajas — para publicar cuadrantes y tramitar solicitudes.</li>
+        <li><strong>Preferencias:</strong> preferencias de turno y vacaciones cuando las indiques — para mejorar la planificación.</li>
+        <li><strong>Seguridad:</strong> IP y user-agent en login, aceptación legal y auditoría — para prevenir fraudes y demostrar cumplimiento.</li>
+      </ul>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">4. Base jurídica</h3>
+      <p>Ejecución del contrato o relación laboral, cumplimiento de obligaciones legales en materia laboral y sanitaria, y, cuando proceda, interés legítimo del responsable en la organización del servicio.</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">5. Plazo de conservación</h3>
+      <p>Los datos se conservan mientras dure la relación profesional y, tras la baja, durante los plazos legalmente exigibles. Los registros de auditoría se conservan al menos 12 meses. Los logs operativos de autenticación se purgan a los 90 días.</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">6. Ubicación (Unión Europea)</h3>
+      <p>Los datos se alojan en proveedores con centros de datos en la Unión Europea. No transferimos datos personales a terceros países sin las garantías exigidas por el RGPD.</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">7. Cómo ejercer tus derechos</h3>
+      <p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad contactando en <a href="mailto:soporte@aisloq.com" style="color:#D4956A;">soporte@aisloq.com</a>. También puedes presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank" style="color:#D4956A;">AEPD</a>.</p>
+
+      <h3 style="color:#D4956A;margin:20px 0 8px;">8. Seguridad</h3>
+      <p>Medidas técnicas y organizativas: HTTPS, control de acceso por rol, cifrado de identificadores sensibles, auditoría inmutable y copias de seguridad en la UE.</p>
+
+    </div>
+  </div>
+</div>
 
 <script>
 document.getElementById('notify-form').addEventListener('submit', function(e) {
@@ -276,14 +295,11 @@ document.getElementById('notify-form').addEventListener('submit', function(e) {
     document.querySelector('.form-note').style.display = 'none';
   })
   .catch(function() {
-    // Fallback: show success anyway and log email
     document.getElementById('notify-success').style.display = 'block';
     document.querySelector('.form-inner').style.display = 'none';
     document.querySelector('.form-note').style.display = 'none';
   });
 });
 </script>
-
-
 
 </body></html>
